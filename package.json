@@ -1,0 +1,30 @@
+{
+  "name": "mern-ecommerce",
+  "version": "1.0.0",
+  "description": "Fullstack thương mại điện tử.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itachibk/mern-ecommerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itachibk/mern-ecommerce/issues"
+  },
+  "homepage": "https://github.com/itachibk/mern-ecommerce#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "mongoose": "^5.12.14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
