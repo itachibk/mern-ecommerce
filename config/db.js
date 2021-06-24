@@ -1,6 +1,11 @@
-require('dotenv').config();
+//Env config
+const env = require('dotenv');
+env.config();
+//Mongoose require
 const mongoose = require('mongoose')
 
+
+//Kết nối đến database của mongoodb
 const connectDB = async () => {
     try {
         await mongoose.connect(
@@ -19,5 +24,6 @@ const connectDB = async () => {
         process.exit(1)
     }
 }
+
 
 module.exports = connectDB

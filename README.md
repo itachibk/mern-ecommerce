@@ -1,5 +1,4 @@
-##### mern-ecommerce
-Fullstack thương mại điện tử.
+# Fullstack thương mại điện tử.
 
 ## BACKEND:
 # Thietlap
