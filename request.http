@@ -1,49 +1,19 @@
-GET http://localhost:5000/
-Content-Type: application/json
-###
-
-POST http://localhost:5000/api/auth/login
+POST http://localhost:5000/api/signup HTTP/1.1
 Content-Type: application/json
 
 {
-  "username": "admin",
-  "password": "admin"
+    "firstName":"TranThe",
+    "lastName":"Hong",
+    "email":"trant2he23hong122w112@gmail.com",
+    "password":"admi3n123421"
 }
-
 ###
-
-POST http://localhost:5000/api/posts
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYxYjk1YjdkMjljZTFiMTA5YmQxZTAiLCJpYXQiOjE2MTczNjIxNjV9.ZTwbrIeDpchmUjkNQv_bmBd7_Maw2Gp7Y1ioZx2s7i8
+POST http://localhost:5000/api/signin HTTP/1.1
+content-type: application/json
 
 {
-  "title": "React",
-  "description": "React",
-  "url": "react.com",
-  "status": "TO LEARN"
+    "firstName":"TranThe",
+    "lastName":"Hong",
+    "email":"tranthehong1w112@gmail.com",
+    "password":"admin12341"
 }
-
-###
-
-GET http://localhost:5000/api/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYxYjk1YjdkMjljZTFiMTA5YmQxZTAiLCJpYXQiOjE2MTcwMTk3ODF9.ri-nHdgZc1VQTocFLfMgF4_PhFf2TeUVqXLd8tpOkeA
-
-###
-
-PUT http://localhost:5000/api/posts/6061c25ac2533d41dcae2b19
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYxYjk1YjdkMjljZTFiMTA5YmQxZTAiLCJpYXQiOjE2MTcwMTk3ODF9.ri-nHdgZc1VQTocFLfMgF4_PhFf2TeUVqXLd8tpOkeA
-
-{
-  "title": "Vue",
-  "description": "VUEEEEE",
-  "url": "https://vuejs.org",
-  "status": "LEARNING"
-}
-
-###
-
-DELETE http://localhost:5000/api/posts/6061c25ac2533d41dcae2b19
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYxYjk1YjdkMjljZTFiMTA5YmQxZTAiLCJpYXQiOjE2MTcwMTk3ODF9.ri-nHdgZc1VQTocFLfMgF4_PhFf2TeUVqXLd8tpOkeA
-DELETE http://localhost:5000/api/posts/6061c25ac2533d41dcae2b19
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYxYjk1YjdkMjljZTFiMTA5YmQxZTAiLCJpYXQiOjE2MTcwMTk3ODF9.ri-nHdgZc1VQTocFLfMgF4_PhFf2TeUVqXLd8tpOkeA

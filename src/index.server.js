@@ -1,12 +1,12 @@
 const express = require('express');
 //env
-const env = require('dotenv');
-env.config();
+require('dotenv').config();;
+
 
 const connectDB = require(".././config/db");
 
 //routes
-const userRoutes = require('./routes/user');
+const userRoutes = require('./routes/auth');
 
 connectDB();
 
