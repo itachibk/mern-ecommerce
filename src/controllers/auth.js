@@ -2,10 +2,11 @@ const User = require('../models/user')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 const shortid = require('shortid')
-
+const bcrypt = require('bcrypt')
 
 //Đăng kí mới
 exports.signup = (req, res) => {
+    console.log(req.body)
     User.findOne({ email: req.body.email }).exec(async (error, user) => {
         //Trường hợp có lỗi.
         if (error) return res.status(400).json({ message: "Có lỗi khi xác thực thông tin user" });
@@ -20,14 +21,15 @@ exports.signup = (req, res) => {
             firstName,
             lastName,
             email,
-            password,
-            username: shortid.generate(),
+            hash_password,
+            userName: shortid.generate(),
         });
+        console.log(userTemp)
         //Lưu lại thông tin user
         userTemp.save((error, user) => {
             //Trường hợp lỗi
             if (error) {
-                return res.status(400).json({ message: "Tạo user thất bại" });
+                return res.status(400).json({ message: `"Tạo user thất bại" ${error}` });
             }
             //Trường hợp lưu thành công.
             if (user) {
@@ -69,7 +71,7 @@ exports.signin = (req, res) => {
 
 //Tạo tokenid
 const generateJwtToken = (_id, role) => {
-    return jwt.sign({ _id, role }, process.env.JWT_SECRET, {
+    return jwt.sign({ _id, role }, process.env.ACCESS_TOKEN_SECRET, {
         expiresIn: "1d",
     });
 };

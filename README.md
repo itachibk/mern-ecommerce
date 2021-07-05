@@ -10,3 +10,10 @@ npm install --save shortid
 
 # START SERVER
 npm start
+
+
+
+##FRONTEND
+npm install redux react-redux redux-thunk --save
+npm install react-bootstrap bootstrap@4.6.0
+npm install react-router-dom

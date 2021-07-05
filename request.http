@@ -2,10 +2,10 @@ POST http://localhost:5000/api/signup HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName":"TranThe",
+    "firstName":"ss",
     "lastName":"Hong",
-    "email":"trant2he23hong2122w112@gmail.com",
-    "password":"admi3n123421"
+    "email":"trwew12w3e1rail.com",
+    "password":"adms1"
 }
 ###
 POST http://localhost:5000/api/signin HTTP/1.1
@@ -14,6 +14,6 @@ content-type: application/json
 {
     "firstName":"TranThe",
     "lastName":"Hong",
-    "email":"tranthehong1w112@gmail.com",
-    "password":"admin12341"
+    "email":"trwew123e1rail@gmail.com",
+    "password":"adms1"
 }
