@@ -15,5 +15,5 @@ npm start
 
 ##FRONTEND
 npm install redux react-redux redux-thunk --save
-npm install react-bootstrap bootstrap@4.6.0
-npm install react-router-dom
+npm install react-bootstrap bootstrap@4.6.0 --save
+npm install react-router-dom --save

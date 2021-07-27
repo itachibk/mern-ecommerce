@@ -9,7 +9,7 @@ const mongoose = require('mongoose')
 const connectDB = async () => {
     try {
         await mongoose.connect(
-            `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@ez-web.iyr0g.mongodb.net/myweb_02?retryWrites=true&w=majority`,
+            `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@ez-web.iyr0g.mongodb.net/myapp?retryWrites=true&w=majority`,
             {
                 useCreateIndex: true,
                 useNewUrlParser: true,
